@@ -1,2 +1,6 @@
 # ignore everything in tmp
 tmp/*
+
+# ignore the Bundler products
+.bundle
+Gemfile.lock
