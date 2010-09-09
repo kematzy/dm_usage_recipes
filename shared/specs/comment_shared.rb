@@ -58,8 +58,14 @@ share_examples_for "Comment -> associations -> relationships" do
   end #/ associations
 end 
 
+share_examples_for "Comment -> respond_to(:valid?)" do 
+  it "should respond to :valid? if dm-validations is loaded" do 
+    @comment.should respond_to(:valid?)
+  end
+end 
+
 share_examples_for "Comment -> NOT respond_to(:valid?)" do 
-  it "should NOT respond to :valid?" do 
+  it "should NOT respond to :valid? unless dm-validations is loaded" do 
     @comment.should_not respond_to(:valid?)
   end
 end 

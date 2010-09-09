@@ -44,8 +44,14 @@ share_examples_for "Post -> associations -> relationships -> empty" do
 end 
 
 share_examples_for "Post -> respond_to(:valid?)" do 
-  it "should respond to :valid?" do 
+  it "should respond to :valid? if dm-validations is loaded" do 
     @post.should respond_to(:valid?)
+  end
+end 
+
+share_examples_for "Post -> NOT respond_to(:valid?)" do 
+  it "should NOT respond to :valid? unless dm-validations is loaded" do 
+    @post.should_not respond_to(:valid?)
   end
 end 
 
