@@ -18,6 +18,10 @@ group :dm_mysql_adapter do
   gem 'dm-mysql-adapter', dm_version 
 end
 
+group :dm_yaml_adapter do 
+  gem 'dm-yaml-adapter', dm_version 
+end
+
 
 ## DB FUNCTIONALITY GROUPS
 
