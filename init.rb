@@ -33,3 +33,12 @@ def load_shared_specs_for(*specs)
 end
 
 
+def setup_db_and_migrate(dbname = nil)
+  if dbname.nil?
+    DataMapper.setup(:default, 'sqlite3::memory:')
+  else
+    DataMapper.setup( :default, "sqlite3://#{APP_ROOT}/tmp/#{dbname}.db" )
+  end
+  DataMapper.auto_migrate!
+end
+
