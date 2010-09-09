@@ -30,7 +30,7 @@ def load_models(*models)
   end
 end
 
-def load_specs(*specs)
+def load_shared_specs_for(*specs)
   specs.each do |spec|
     require "#{APP_ROOT}/shared/specs/#{spec}_shared"
   end
