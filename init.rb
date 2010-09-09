@@ -17,10 +17,6 @@ end
 Bundler.require(:default, :dm_sqlite_adapter)
 # Bundler.require(:default, :dm_mysql_adapter)
 
-# Require migrations, validations
-Bundler.require(:default, :dm_migrations)
-Bundler.require(:default, :dm_validations)
-
 
 ## HELPER METHODS
 
